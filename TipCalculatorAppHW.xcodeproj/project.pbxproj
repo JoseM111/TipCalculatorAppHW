@@ -32,7 +32,7 @@
 		AB68AAED24732E74008F4665 /* MyTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTools.swift; sourceTree = "<group>"; };
 		AB68AAF024732FCA008F4665 /* Nosifer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nosifer-Regular.ttf"; sourceTree = "<group>"; };
 		AB68AAF124733006008F4665 /* Audiowide-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Audiowide-Regular.ttf"; sourceTree = "<group>"; };
-		ABE896E92473450F00CF7FC0 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipCalculatorViewController.swift; path = TipCalculatorAppHW/Views/Storyboards/TipCalculatorViewController.swift; sourceTree = SOURCE_ROOT; };
+		ABE896E92473450F00CF7FC0 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipCalculatorViewController.swift; path = TipCalculatorAppHW/Controllers/TipCalculatorViewController.swift; sourceTree = SOURCE_ROOT; };
 		ABE896EB2473497400CF7FC0 /* TipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipCalculator.swift; path = TipCalculatorAppHW/Views/Storyboards/TipCalculator.swift; sourceTree = SOURCE_ROOT; };
 		ABE896EF2473E9EB00CF7FC0 /* TipCalculatorAppHW.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TipCalculatorAppHW.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,17 +87,9 @@
 		AB68AAE524732D8F008F4665 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB68AAE624732D98008F4665 /* ViewController */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		AB68AAE624732D98008F4665 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
 				ABE896E92473450F00CF7FC0 /* TipCalculatorViewController.swift */,
 			);
-			path = ViewController;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AB68AAE824732DC7008F4665 /* Views */ = {
@@ -128,13 +120,13 @@
 		AB68AAEB24732E46008F4665 /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				AB1E1ADF2473FF4E00B72674 /* StyleGuide */,
-				AB68AAEF24732F8D008F4665 /* Fonts */,
-				AB68AAEC24732E5F008F4665 /* MyTools */,
 				AB68AAD124732D49008F4665 /* AppDelegate.swift */,
 				AB68AAD324732D49008F4665 /* SceneDelegate.swift */,
 				AB68AADA24732D4B008F4665 /* Assets.xcassets */,
 				AB68AADF24732D4B008F4665 /* Info.plist */,
+				AB1E1ADF2473FF4E00B72674 /* StyleGuide */,
+				AB68AAEF24732F8D008F4665 /* Fonts */,
+				AB68AAEC24732E5F008F4665 /* MyTools */,
 			);
 			path = Res;
 			sourceTree = "<group>";
