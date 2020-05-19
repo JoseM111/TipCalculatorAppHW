@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5lD-1O-rBr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Audiowide-Regular.ttf">
+            <string>Audiowide-Regular</string>
+        </array>
+        <array key="Nosifer-Regular.ttf">
+            <string>Nosifer-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tip Calculator View Controller-->
+        <scene sceneID="DIM-uR-a4N">
+            <objects>
+                <viewController id="5lD-1O-rBr" customClass="TipCalculatorViewController" customModule="TipCalculatorAppHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ArY-rI-SbB" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-8P-fBz">
+                                <rect key="frame" x="34" y="88" width="339" height="54"/>
+                                <fontDescription key="fontDescription" name="Nosifer-Regular" family="Nosifer" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iJ-mx-1as" userLabel="Bill View">
+                                <rect key="frame" x="25" y="174" width="108" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amt:$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-xj-tXT">
+                                        <rect key="frame" x="8" y="8" width="92" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="vOg-R6-Zsi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HcR-xj-tXT" firstAttribute="trailing" secondItem="7iJ-mx-1as" secondAttribute="trailingMargin" id="LAF-SU-psH"/>
+                                    <constraint firstItem="HcR-xj-tXT" firstAttribute="leading" secondItem="7iJ-mx-1as" secondAttribute="leadingMargin" id="Wh9-3h-mdy"/>
+                                    <constraint firstItem="HcR-xj-tXT" firstAttribute="top" secondItem="7iJ-mx-1as" secondAttribute="topMargin" id="tGN-CY-JAA"/>
+                                    <constraint firstItem="HcR-xj-tXT" firstAttribute="centerY" secondItem="7iJ-mx-1as" secondAttribute="centerY" id="zuE-DL-L7S"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfC-Cv-IE8" userLabel="Bill AMT View">
+                                <rect key="frame" x="132" y="174" width="250" height="42"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3aZ-J8-QzD">
+                                        <rect key="frame" x="8" y="3" width="234" height="36"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Nosifer-Regular" family="Nosifer" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                        <connections>
+                                            <action selector="amtBeforeTipValueChange:" destination="5lD-1O-rBr" eventType="editingDidEnd" id="csQ-ek-vpf"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3aZ-J8-QzD" firstAttribute="trailing" secondItem="rfC-Cv-IE8" secondAttribute="trailingMargin" id="CiJ-yD-2qj"/>
+                                    <constraint firstItem="3aZ-J8-QzD" firstAttribute="leading" secondItem="rfC-Cv-IE8" secondAttribute="leadingMargin" id="HfS-yj-T05"/>
+                                    <constraint firstItem="3aZ-J8-QzD" firstAttribute="centerY" secondItem="rfC-Cv-IE8" secondAttribute="centerY" id="o8l-dl-b4R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE4-LH-oZr" userLabel="Tip % View">
+                                <rect key="frame" x="25" y="236" width="108" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip 10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-wH-LDp">
+                                        <rect key="frame" x="8" y="8" width="83" height="26"/>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ed7-wH-LDp" firstAttribute="top" secondItem="eE4-LH-oZr" secondAttribute="top" constant="8" id="0JW-Zy-Nhe"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ed7-wH-LDp" secondAttribute="bottom" constant="9" id="YqY-uz-UQb"/>
+                                    <constraint firstItem="Ed7-wH-LDp" firstAttribute="leading" secondItem="eE4-LH-oZr" secondAttribute="leading" constant="8" id="a8j-9R-t5a"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ed7-wH-LDp" secondAttribute="trailing" constant="8" id="kXZ-GG-YMm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O07-gc-5ic" userLabel="Tip Slider View">
+                                <rect key="frame" x="132" y="236" width="250" height="43"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-0X-3uf">
+                                        <rect key="frame" x="6" y="7" width="238" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="tipValueSliderChange:" destination="5lD-1O-rBr" eventType="valueChanged" id="LbU-Lg-Y4h"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H75-PR-EHl" userLabel="TIP % View">
+                                <rect key="frame" x="25" y="299" width="108" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-aZ-Nnt">
+                                        <rect key="frame" x="8" y="8" width="92" height="26"/>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pi1-aZ-Nnt" firstAttribute="trailing" secondItem="H75-PR-EHl" secondAttribute="trailingMargin" id="V7C-Wm-507"/>
+                                    <constraint firstItem="pi1-aZ-Nnt" firstAttribute="top" secondItem="H75-PR-EHl" secondAttribute="topMargin" id="dmf-S9-vwB"/>
+                                    <constraint firstItem="pi1-aZ-Nnt" firstAttribute="leading" secondItem="H75-PR-EHl" secondAttribute="leadingMargin" id="m1S-1c-ZRI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E55-yA-jaO">
+                                <rect key="frame" x="132" y="299" width="250" height="43"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="d03-4y-vPH">
+                                        <rect key="frame" x="6" y="7" width="238" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="numberOfPeopleToSplitBillWith:" destination="5lD-1O-rBr" eventType="valueChanged" id="U5d-D0-RXf"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55O-Cr-LpS" userLabel="Split View">
+                                <rect key="frame" x="215" y="389" width="179" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBR-Lb-sHL">
+                                        <rect key="frame" x="26" y="8" width="39" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="4gh-db-9fS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfE-dH-BPS">
+                                        <rect key="frame" x="37" y="46" width="105" height="39"/>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="bfE-dH-BPS" firstAttribute="centerX" secondItem="55O-Cr-LpS" secondAttribute="centerX" id="XQC-x6-7mt"/>
+                                    <constraint firstItem="ZBR-Lb-sHL" firstAttribute="top" secondItem="55O-Cr-LpS" secondAttribute="topMargin" id="blv-AK-uf1"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZBR-Lb-sHL" secondAttribute="trailing" constant="20" symbolic="YES" id="c6E-Ka-jvf"/>
+                                    <constraint firstItem="bfE-dH-BPS" firstAttribute="top" secondItem="ZBR-Lb-sHL" secondAttribute="bottom" constant="12" id="nfj-5g-1uP"/>
+                                    <constraint firstItem="ZBR-Lb-sHL" firstAttribute="leading" secondItem="55O-Cr-LpS" secondAttribute="leading" constant="26" id="wBx-YI-3yg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e1-4B-Ikt" userLabel="Total View">
+                                <rect key="frame" x="16" y="389" width="179" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeF-8I-pK6">
+                                        <rect key="frame" x="37" y="46" width="105" height="39"/>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSa-pa-ZZX">
+                                        <rect key="frame" x="26" y="9" width="43" height="25"/>
+                                        <fontDescription key="fontDescription" name="Audiowide-Regular" family="Audiowide" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="JSa-pa-ZZX" firstAttribute="top" secondItem="5e1-4B-Ikt" secondAttribute="top" constant="9" id="3Td-bY-EbH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JSa-pa-ZZX" secondAttribute="trailing" symbolic="YES" id="5mb-Dc-ESw"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UeF-8I-pK6" secondAttribute="trailing" symbolic="YES" id="9FO-t1-hyp"/>
+                                    <constraint firstItem="UeF-8I-pK6" firstAttribute="top" secondItem="JSa-pa-ZZX" secondAttribute="bottom" constant="12" id="Lrj-qT-XA1"/>
+                                    <constraint firstItem="UeF-8I-pK6" firstAttribute="leading" secondItem="5e1-4B-Ikt" secondAttribute="leading" constant="37" id="Suj-gS-19w"/>
+                                    <constraint firstAttribute="bottom" secondItem="UeF-8I-pK6" secondAttribute="bottom" constant="43" id="cRn-cl-s6F"/>
+                                    <constraint firstItem="JSa-pa-ZZX" firstAttribute="leading" secondItem="5e1-4B-Ikt" secondAttribute="leading" constant="26" id="m5y-5z-adZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2Y-QQ-ilx">
+                                <rect key="frame" x="132" y="561" width="150" height="30"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearBill:" destination="5lD-1O-rBr" eventType="touchUpInside" id="wio-UH-v7d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="trailing" secondItem="bWe-8P-fBz" secondAttribute="trailing" constant="41" id="1np-xv-D8l"/>
+                            <constraint firstItem="eE4-LH-oZr" firstAttribute="top" secondItem="7iJ-mx-1as" secondAttribute="bottom" constant="20" id="2CE-3j-N0h"/>
+                            <constraint firstAttribute="bottom" secondItem="O07-gc-5ic" secondAttribute="bottom" constant="617" id="2JI-rf-r3h"/>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="bottom" secondItem="S2Y-QQ-ilx" secondAttribute="bottom" constant="271" id="3pg-Br-i8X"/>
+                            <constraint firstItem="O07-gc-5ic" firstAttribute="bottom" secondItem="eE4-LH-oZr" secondAttribute="bottom" id="4WM-yN-aFa"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="leading" secondItem="H75-PR-EHl" secondAttribute="leading" id="4bE-kI-tJt"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="leading" secondItem="eE4-LH-oZr" secondAttribute="leading" id="64t-U5-rbT"/>
+                            <constraint firstItem="O07-gc-5ic" firstAttribute="top" secondItem="rfC-Cv-IE8" secondAttribute="bottom" constant="20" id="6ao-fl-Q9z"/>
+                            <constraint firstItem="rfC-Cv-IE8" firstAttribute="leading" secondItem="O07-gc-5ic" secondAttribute="leading" id="7Sq-KR-e5C"/>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="bottom" secondItem="55O-Cr-LpS" secondAttribute="bottom" constant="345" id="7s1-3F-Qq7"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="top" secondItem="rfC-Cv-IE8" secondAttribute="top" id="8gG-Wr-f3M"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="top" secondItem="5e1-4B-Ikt" secondAttribute="top" id="9vz-ME-nLD"/>
+                            <constraint firstItem="5e1-4B-Ikt" firstAttribute="leading" secondItem="Ic3-aR-JM8" secondAttribute="leading" constant="16" id="EI2-8f-hea"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="leading" secondItem="Ic3-aR-JM8" secondAttribute="leading" constant="25" id="GcV-2a-gej"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="trailing" secondItem="ArY-rI-SbB" secondAttribute="trailingMargin" id="I0c-t0-LYo"/>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="trailing" secondItem="S2Y-QQ-ilx" secondAttribute="trailing" constant="132" id="K89-yq-bYK"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="trailing" secondItem="eE4-LH-oZr" secondAttribute="trailing" id="Kdp-al-HJq"/>
+                            <constraint firstItem="E55-yA-jaO" firstAttribute="top" secondItem="H75-PR-EHl" secondAttribute="top" id="LAC-Ng-gR1"/>
+                            <constraint firstItem="bWe-8P-fBz" firstAttribute="leading" secondItem="Ic3-aR-JM8" secondAttribute="leading" constant="34" id="LUv-qB-1SH"/>
+                            <constraint firstItem="E55-yA-jaO" firstAttribute="top" secondItem="O07-gc-5ic" secondAttribute="bottom" constant="20" id="S4v-A8-hNz"/>
+                            <constraint firstItem="rfC-Cv-IE8" firstAttribute="leading" secondItem="E55-yA-jaO" secondAttribute="leading" id="TAe-co-MAA"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="bottom" secondItem="5e1-4B-Ikt" secondAttribute="bottom" id="URp-v8-UYu"/>
+                            <constraint firstItem="S2Y-QQ-ilx" firstAttribute="top" secondItem="55O-Cr-LpS" secondAttribute="bottom" constant="44" id="VcB-1a-pja"/>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="trailing" secondItem="rfC-Cv-IE8" secondAttribute="trailing" constant="32" id="cZc-ze-2Aq"/>
+                            <constraint firstItem="Ic3-aR-JM8" firstAttribute="trailing" secondItem="7iJ-mx-1as" secondAttribute="trailing" constant="281" id="dTA-tH-vmz"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="leading" secondItem="ArY-rI-SbB" secondAttribute="leading" constant="215" id="dy8-wJ-IGH"/>
+                            <constraint firstAttribute="bottom" secondItem="7iJ-mx-1as" secondAttribute="bottom" constant="680" id="e6O-W1-7bm"/>
+                            <constraint firstItem="bWe-8P-fBz" firstAttribute="top" secondItem="Ic3-aR-JM8" secondAttribute="top" constant="44" id="fwq-hp-Mxk"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="top" secondItem="bWe-8P-fBz" secondAttribute="bottom" constant="32" id="g3k-hh-pSd"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="leading" secondItem="5e1-4B-Ikt" secondAttribute="trailing" constant="20" id="jAc-Nw-AEM"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="trailing" secondItem="H75-PR-EHl" secondAttribute="trailing" id="kJ2-FH-0xX"/>
+                            <constraint firstItem="rfC-Cv-IE8" firstAttribute="trailing" secondItem="E55-yA-jaO" secondAttribute="trailing" id="ovK-Jp-Df4"/>
+                            <constraint firstItem="55O-Cr-LpS" firstAttribute="top" secondItem="E55-yA-jaO" secondAttribute="bottom" constant="47" id="p4M-H6-cMz"/>
+                            <constraint firstItem="E55-yA-jaO" firstAttribute="bottom" secondItem="H75-PR-EHl" secondAttribute="bottom" id="riV-2a-MrB"/>
+                            <constraint firstAttribute="bottom" secondItem="E55-yA-jaO" secondAttribute="bottom" constant="554" id="tyx-Yp-hTe"/>
+                            <constraint firstItem="rfC-Cv-IE8" firstAttribute="trailing" secondItem="O07-gc-5ic" secondAttribute="trailing" id="ux4-N5-vUl"/>
+                            <constraint firstItem="7iJ-mx-1as" firstAttribute="bottom" secondItem="rfC-Cv-IE8" secondAttribute="bottom" id="wSc-na-Fsf"/>
+                            <constraint firstItem="rfC-Cv-IE8" firstAttribute="leading" secondItem="Ic3-aR-JM8" secondAttribute="leading" constant="132" id="xXB-cH-c7B"/>
+                            <constraint firstItem="S2Y-QQ-ilx" firstAttribute="leading" secondItem="Ic3-aR-JM8" secondAttribute="leading" constant="132" id="yKB-ib-btn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ic3-aR-JM8"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountBeforeTipTextField" destination="3aZ-J8-QzD" id="OlX-GV-Ykk"/>
+                        <outlet property="billTotalLabel" destination="UeF-8I-pK6" id="rO9-6J-q6Z"/>
+                        <outlet property="clearBtn" destination="S2Y-QQ-ilx" id="NRu-S2-Wds"/>
+                        <outlet property="splitBillLabel" destination="pi1-aZ-Nnt" id="t50-MU-KdM"/>
+                        <outlet property="splitBillSlider" destination="d03-4y-vPH" id="Wfb-pm-bs0"/>
+                        <outlet property="splitEachPersonLabel" destination="bfE-dH-BPS" id="zf6-Ay-rWV"/>
+                        <outlet property="splitView" destination="55O-Cr-LpS" id="Qwg-KE-DSx"/>
+                        <outlet property="tipPctLabel" destination="Ed7-wH-LDp" id="xcm-Cs-uSN"/>
+                        <outlet property="tipPctSlider" destination="T4T-0X-3uf" id="eBQ-fQ-dOk"/>
+                        <outlet property="totalView" destination="5e1-4B-Ikt" id="27g-Wr-9qH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00p-75-Mlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="225"/>
+        </scene>
+    </scenes>
+</document>
